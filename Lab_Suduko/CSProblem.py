@@ -79,7 +79,7 @@ def is_solved(problem):
 
 def is_consistent(problem, v1, v2, x1, x2):
     # Returns True if v1=x1 and v2=x2 is consistent with all constraints
-    # your code here
+    # your code here:
     # מקבל שני מקומות, ובודק האם ההצבה תקינה ביחס לשני המספרים האלו בלבד
 
     return 0
