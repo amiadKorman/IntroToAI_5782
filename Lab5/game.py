@@ -8,7 +8,7 @@ Authors: Binyamin Rosner & Amiad Korman
 VIC = 10 ** 20  # The value of a winning board (for max)
 LOSS = -VIC  # The value of a losing board (for max)
 TIE = 0  # The value of a tie
-SIZE = 8  # The length of a winning sequence
+SIZE = 5  # The length of a winning sequence
 COMPUTER = SIZE + 1  # Marks the computer's cells on the board
 HUMAN = 1  # Marks the human cells on the board
 VALUE = 10
