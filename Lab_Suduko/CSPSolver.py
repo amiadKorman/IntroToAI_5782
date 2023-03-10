@@ -3,13 +3,13 @@ import copy
 
 
 def solve(n):
-    p = CSProblem.create()  # backtrack(CSProblem.create())
+    p = backtrack(CSProblem.create())
     CSProblem.present(p)
 
 
 def backtrack(p):
     var = next_var(p)  #
-    if var is None:
+    if var == None:
         return p
     dom = sorted_domain(p, var, LCV=True)  #
     for i in dom:
@@ -23,7 +23,7 @@ def backtrack(p):
 
 
 def sorted_domain(p, var, LCV=True):
-    if not LCV:
+    if LCV == False:
         return CSProblem.domain(p, var)
     l = []
     for i in CSProblem.domain(p, var):
@@ -49,7 +49,7 @@ def next_var(p, MRV=True):
     # Returns next var. to assign
     # If MRV=True uses MRV heuristics
     # If MRV=False returns first non-assigned ver.
-    if not MRV:
+    if MRV == False:
         v = CSProblem.get_list_of_free_vars(p)
         if v == []:
             return None
